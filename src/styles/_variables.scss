@@ -1,0 +1,131 @@
+/* ===========================================================
+   GLOBAL DESIGN TOKENS
+   Use across all projects
+   -----------------------------------------------------------
+   Includes:
+   - Colors
+   - Spacing scale
+   - Border radius
+   - Shadows
+   - Typography
+   - Breakpoints
+   - Layout tokens
+=========================================================== */
+
+/* -----------------------------------
+   COLOR SYSTEM
+----------------------------------- */
+
+/* Primary palette */
+$color-primary: #00e5ff;
+$color-secondary: #ff8c00;
+$color-accent: #4e9eff;
+
+/* Grayscale */
+$color-white: #ffffff;
+$color-black: #000000;
+
+$gray-50: #f8f9fa;
+$gray-100: #f1f3f5;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+/* Feedback colors */
+$success: #22c55e;
+$error: #ef4444;
+$warning: #f59e0b;
+$info: #0ea5e9;
+
+/* Dark mode tokens (optional) */
+$dark-bg: #0f0f0f;
+$dark-surface: #1b1b1b;
+$dark-text: #e5e5e5;
+
+
+/* -----------------------------------
+   SPACING SCALE (8px SYSTEM)
+----------------------------------- */
+
+$space-xxs: 4px;
+$space-xs: 8px;
+$space-sm: 12px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-xxl: 48px;
+$space-xxxl: 64px;
+
+
+/* -----------------------------------
+   BORDER RADIUS
+----------------------------------- */
+
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 999px; // circle
+
+
+/* -----------------------------------
+   SHADOWS
+----------------------------------- */
+
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-md: 0 4px 10px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.20);
+$shadow-glass: 0 8px 30px rgba(255, 255, 255, 0.15);
+
+
+/* -----------------------------------
+   TYPOGRAPHY
+----------------------------------- */
+
+/* Font-family */
+$font-main: 'Inter', 'Poppins', sans-serif;
+
+/* Responsive font scale */
+$font-xs: clamp(12px, 1vw, 14px);
+$font-sm: clamp(14px, 1.2vw, 16px);
+$font-md: clamp(16px, 1.5vw, 18px);
+$font-lg: clamp(20px, 2vw, 24px);
+$font-xl: clamp(26px, 3vw, 32px);
+$font-xxl: clamp(32px, 3.5vw, 42px);
+$font-xxxl: clamp(42px, 4vw, 54px);
+
+/* Font weights */
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+/* Line heights */
+$lh-tight: 1.1;
+$lh-normal: 1.4;
+$lh-relaxed: 1.6;
+
+
+/* -----------------------------------
+   BREAKPOINTS
+----------------------------------- */
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1440px;
+
+
+/* -----------------------------------
+   LAYOUT SIZING
+----------------------------------- */
+
+$container-max: 1200px;
+$header-height: 64px;
+$mobile-nav-height: 56px;
+$section-spacing: 80px;

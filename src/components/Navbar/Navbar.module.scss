@@ -1,0 +1,150 @@
+/* ✅ Navbar shell */
+.navbar {
+    background: rgba(2, 6, 23, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    z-index: 1300;
+}
+
+/* ✅ Centered content */
+.inner {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e5e7eb;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+
+    cursor: pointer;
+    user-select: none;
+
+
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+}
+
+/* ✅ Theme Toggle Switch (Sun / Moon) */
+
+.themeToggle {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    border-radius: 999px;
+
+    background: #020617;
+    border: 1px solid #334155;
+
+    cursor: pointer;
+    padding: 0;
+
+    transition: background 0.3s ease, border-color 0.3s ease;
+    color: #ffa500; // default (light mode icon color)
+
+    /* ✅ Sliding knob */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #e5e7eb;
+
+        z-index: 1;
+        transition: transform 0.3s ease;
+    }
+
+    /* ✅ Shared icon styles (MUI renders svg) */
+    .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        font-size: 16px;
+        pointer-events: none;
+
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        color: currentColor;
+    }
+
+    /* ✅ Icon positions */
+    .sun {
+        left: 4px;
+    }
+
+    .moon {
+        right: 4px;
+    }
+
+    /* ✅ Light mode (sun active) */
+    &.light {
+        color: #ffa500;
+
+        .sun {
+            opacity: 1;
+        }
+
+        .moon {
+            opacity: 0.3;
+        }
+    }
+
+    /* ✅ Dark mode (moon active) */
+    &.dark {
+        color: #ffd700;
+
+        &::before {
+            transform: translateX(22px);
+        }
+
+        .sun {
+            opacity: 0.3;
+        }
+
+        .moon {
+            opacity: 1;
+        }
+    }
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+    .inner {
+        max-width: 100%;
+        padding: 0 24px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+}
+
+/* ✅ Mobile safe */
+@media (max-width: 600px) {
+    .inner {
+        min-height: 56px;
+        padding: 0 16px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "BAT-2019-NMC-0011",
+    "chemistry": "NMC",
+    "age_years": 5,
+    "soh_percent": 78,
+    "cycle_count": 1420,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 12,
+    "expected_outcome": "REMANUFACTURE"
+  },
+  {
+    "id": "BAT-2017-NMC-0028",
+    "chemistry": "NMC",
+    "age_years": 7,
+    "soh_percent": 63,
+    "cycle_count": 2100,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 8,
+    "expected_outcome": "REPURPOSE"
+  },
+  {
+    "id": "BAT-2016-NMC-0045",
+    "chemistry": "NMC",
+    "age_years": 8,
+    "soh_percent": 41,
+    "cycle_count": 2900,
+    "physical_damage": false,
+    "deep_discharge_event": true,
+    "recycled_content_percent": 7,
+    "expected_outcome": "DISPOSE"
+  },
+  {
+    "id": "BAT-2020-LFP-0063",
+    "chemistry": "LFP",
+    "age_years": 4,
+    "soh_percent": 85,
+    "cycle_count": 1800,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 18,
+    "expected_outcome": "REMANUFACTURE"
+  },
+  {
+    "id": "BAT-2018-LFP-0077",
+    "chemistry": "LFP",
+    "age_years": 6,
+    "soh_percent": 69,
+    "cycle_count": 2600,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 14,
+    "expected_outcome": "REPURPOSE"
+  },
+  {
+    "id": "BAT-2015-NCA-0092",
+    "chemistry": "NCA",
+    "age_years": 9,
+    "soh_percent": 55,
+    "cycle_count": 2200,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 6,
+    "expected_outcome": "RECYCLE"
+  },
+  {
+    "id": "BAT-2021-NCA-0104",
+    "chemistry": "NCA",
+    "age_years": 3,
+    "soh_percent": 91,
+    "cycle_count": 980,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 22,
+    "expected_outcome": "REMANUFACTURE"
+  },
+  {
+    "id": "BAT-2019-NMC-0118",
+    "chemistry": "NMC",
+    "age_years": 5,
+    "soh_percent": 74,
+    "cycle_count": 1650,
+    "physical_damage": true,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 11,
+    "expected_outcome": "DISPOSE"
+  },
+  {
+    "id": "BAT-2022-LFP-0135",
+    "chemistry": "LFP",
+    "age_years": 2,
+    "soh_percent": 94,
+    "cycle_count": 610,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 26,
+    "expected_outcome": "REMANUFACTURE"
+  },
+  {
+    "id": "BAT-2014-NMC-0149",
+    "chemistry": "NMC",
+    "age_years": 10,
+    "soh_percent": 28,
+    "cycle_count": 3400,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 4,
+    "expected_outcome": "RECYCLE"
+  },
+  {
+    "id": "BAT-2020-NCA-0162",
+    "chemistry": "NCA",
+    "age_years": 4,
+    "soh_percent": 66,
+    "cycle_count": 1900,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 16,
+    "expected_outcome": "REPURPOSE"
+  },
+  {
+    "id": "BAT-2018-NMC-0175",
+    "chemistry": "NMC",
+    "age_years": 6,
+    "soh_percent": 59,
+    "cycle_count": 2350,
+    "physical_damage": false,
+    "deep_discharge_event": true,
+    "recycled_content_percent": 9,
+    "expected_outcome": "DISPOSE"
+  },
+  {
+    "id": "BAT-2023-LFP-0188",
+    "chemistry": "LFP",
+    "age_years": 1,
+    "soh_percent": 97,
+    "cycle_count": 310,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 31,
+    "expected_outcome": "REMANUFACTURE"
+  },
+  {
+    "id": "BAT-2016-NCA-0201",
+    "chemistry": "NCA",
+    "age_years": 8,
+    "soh_percent": 38,
+    "cycle_count": 2800,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 5,
+    "expected_outcome": "RECYCLE"
+  },
+  {
+    "id": "BAT-2021-NMC-0214",
+    "chemistry": "NMC",
+    "age_years": 3,
+    "soh_percent": 83,
+    "cycle_count": 1100,
+    "physical_damage": false,
+    "deep_discharge_event": false,
+    "recycled_content_percent": 19,
+    "expected_outcome": "REMANUFACTURE"
+  }
+]

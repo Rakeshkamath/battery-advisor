@@ -1,0 +1,366 @@
+// @use './variables' as *;
+
+// .p-lg {
+//     padding: $space-lg;
+// }
+
+// .mb-lg {
+//     margin-bottom: $space-lg;
+// }
+
+// .text-sm {
+//     font-size: $font-sm;
+// }
+
+// .text-md {
+//     font-size: $font-md;
+// }
+
+// .text-lg {
+//     font-size: $font-lg;
+// }
+
+// .text-xl {
+//     font-size: $font-xl;
+// }
+
+// .fw-bold {
+//     font-weight: $fw-bold;
+// }
+
+
+@use './variables' as *;
+
+/* ===========================================================
+   UTILITIES
+   Global helper classes usable across all projects
+   -----------------------------------------------------------
+   - Spacing (margin/padding)
+   - Text helpers
+   - Flex utilities
+   - Display helpers
+   - Borders / radius
+   - Width / height
+=========================================================== */
+
+
+/* -----------------------------------
+   SPACING (MARGIN / PADDING)
+----------------------------------- */
+
+/* Padding */
+.p-xxs {
+    padding: $space-xxs;
+}
+
+.p-xs {
+    padding: $space-xs;
+}
+
+.p-sm {
+    padding: $space-sm;
+}
+
+.p-md {
+    padding: $space-md;
+}
+
+.p-lg {
+    padding: $space-lg;
+}
+
+.p-xl {
+    padding: $space-xl;
+}
+
+.p-xxl {
+    padding: $space-xxl;
+}
+
+/* Margin */
+.m-xxs {
+    margin: $space-xxs;
+}
+
+.m-xs {
+    margin: $space-xs;
+}
+
+.m-sm {
+    margin: $space-sm;
+}
+
+.m-md {
+    margin: $space-md;
+}
+
+.m-lg {
+    margin: $space-lg;
+}
+
+.m-xl {
+    margin: $space-xl;
+}
+
+.m-xxl {
+    margin: $space-xxl;
+}
+
+/* Margin bottom only */
+.mb-sm {
+    margin-bottom: $space-sm;
+}
+
+.mb-md {
+    margin-bottom: $space-md;
+}
+
+.mb-lg {
+    margin-bottom: $space-lg;
+}
+
+.mb-xl {
+    margin-bottom: $space-xl;
+}
+
+/* Margin top only */
+.mt-sm {
+    margin-top: $space-sm;
+}
+
+.mt-md {
+    margin-top: $space-md;
+}
+
+.mt-lg {
+    margin-top: $space-lg;
+}
+
+.mt-xl {
+    margin-top: $space-xl;
+}
+
+
+/* -----------------------------------
+   TYPOGRAPHY UTILITIES
+----------------------------------- */
+
+.text-xs {
+    font-size: $font-xs;
+}
+
+.text-sm {
+    font-size: $font-sm;
+}
+
+.text-md {
+    font-size: $font-md;
+}
+
+.text-lg {
+    font-size: $font-lg;
+}
+
+.text-xl {
+    font-size: $font-xl;
+}
+
+.text-xxl {
+    font-size: $font-xxl;
+}
+
+.fw-regular {
+    font-weight: $fw-regular;
+}
+
+.fw-medium {
+    font-weight: $fw-medium;
+}
+
+.fw-semibold {
+    font-weight: $fw-semibold;
+}
+
+.fw-bold {
+    font-weight: $fw-bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-white {
+    color: $color-white;
+}
+
+.text-black {
+    color: $color-black;
+}
+
+.text-primary {
+    color: $color-primary;
+}
+
+
+/* -----------------------------------
+   DISPLAY UTILITIES
+----------------------------------- */
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/* -----------------------------------
+   FLEX UTILITIES
+----------------------------------- */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* -----------------------------------
+   BORDER / RADIUS
+----------------------------------- */
+
+.rounded-sm {
+    border-radius: $radius-sm;
+}
+
+.rounded-md {
+    border-radius: $radius-md;
+}
+
+.rounded-lg {
+    border-radius: $radius-lg;
+}
+
+.rounded-full {
+    border-radius: $radius-full;
+}
+
+.border {
+    border: 1px solid $gray-300;
+}
+
+.border-none {
+    border: none;
+}
+
+
+/* -----------------------------------
+   WIDTH / HEIGHT UTILITIES
+----------------------------------- */
+
+.w-full {
+    width: 100%;
+}
+
+.w-half {
+    width: 50%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+
+/* -----------------------------------
+   BACKGROUND UTILITIES
+----------------------------------- */
+
+.bg-primary {
+    background-color: $color-primary;
+}
+
+.bg-white {
+    background-color: $color-white;
+}
+
+.bg-black {
+    background-color: $color-black;
+}
+
+.bg-gray {
+    background-color: $gray-200;
+}
+
+
+/* -----------------------------------
+   OPTIONAL: RESPONSIVE VERSIONS
+   (mobile, tablet, desktop)
+----------------------------------- */
+
+@media (max-width: $bp-mobile) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: $bp-tablet) and (max-width: $bp-desktop) {
+    .tablet-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: $bp-desktop) {
+    .desktop-hidden {
+        display: none;
+    }
+}

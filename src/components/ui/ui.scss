@@ -1,0 +1,113 @@
+@use '../../styles/variables' as *;
+
+.btn {
+    --btn-bg: #00e5ff;
+    --btn-hover-bg: #00c8dd;
+    --btn-text: #000;
+
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: $font-sm;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    min-width: 130px;
+
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+
+    &:hover {
+        background-color: var(--btn-hover-bg);
+    }
+
+    &--primary {
+        --btn-bg: #00e5ff;
+        --btn-hover-bg: #00c8dd;
+        --btn-text: #000;
+    }
+
+    &--secondary {
+        --btn-bg: transparent;
+        --btn-hover-bg: rgba(255, 255, 255, 0.1);
+        --btn-text: #fff;
+        border: 1px solid #fff;
+    }
+
+    &--full {
+        width: 100%;
+    }
+}
+
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: $fw-bold;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background: #00e5ff;
+        color: #000;
+        transform: translateY(-2px);
+    }
+}
+
+/* Optional platform-specific accents */
+.icon-btn--facebook:hover {
+    background: #1877f2;
+    color: #fff;
+}
+
+.icon-btn--instagram:hover {
+    background: linear-gradient(45deg,
+            #f58529,
+            #dd2a7b,
+            #8134af,
+            #515bd4);
+    color: #fff;
+}
+
+.icon-btn--github:hover {
+    background: #333;
+    color: #fff;
+}
+
+.icon-btn--linkedin:hover {
+    background: #0a66c2;
+    color: #fff;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    color: #00e5ff;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-btn:hover {
+    color: #0078d4;
+    transform: translateY(-2px);
+}
+
+.icon-btn svg {
+    display: block;
+}

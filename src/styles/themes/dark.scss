@@ -1,0 +1,26 @@
+.theme-dark {
+    --bg-page: #020617;
+    --bg-card: #020617;
+    --bg-card-alt: #0f172a;
+
+    --text-primary: #e5e7eb;
+    --text-secondary: #94a3b8;
+
+    --border-primary: #334155;
+    --border-accent: rgba(56, 189, 248, 0.35);
+
+    --accent: #38bdf8;
+    --error: #ef4444;
+
+    --shadow-card:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(56, 189, 248, 0.15);
+
+    --bg-header: linear-gradient(135deg, #1e293b, #0f172a);
+
+
+    --bg-main: radial-gradient(circle at top,
+            #0ea5a4 0%,
+            #020617 55%);
+
+}

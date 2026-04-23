@@ -1,0 +1,182 @@
+/* =========================
+   SCREEN VIEW (THEMED PREVIEW)
+   ========================= */
+
+.printContainer {
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 32px;
+
+    background: var(--bg-card);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border-accent);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   REPORT HEADER
+   ========================= */
+
+.header {
+    text-align: top;
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.timestamp {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+    margin-bottom: 28px;
+}
+
+.sectionTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid var(--border-primary);
+}
+
+
+.dataTable {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    row-gap: 8px;
+    column-gap: 12px;
+}
+
+.label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.value {
+    color: var(--text-secondary);
+}
+
+/* =========================
+   RESULT SUMMARY
+   ========================= */
+
+.verdict {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.score {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.reasoning {
+    margin-top: 8px;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    margin-top: 40px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-primary);
+
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   TABLET (WEB PREVIEW)
+   ========================= */
+
+@media (max-width: 1024px) {
+    .printContainer {
+        width: 90%;
+    }
+}
+
+/* =========================
+   PRINT / PDF (FINAL OUTPUT)
+   ========================= */
+
+@media print {
+    @page {
+        margin: 0;
+    }
+
+    html,
+    body {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 100% !important;
+    }
+
+    nav,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    .printContainer {
+        max-width: 100%;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        position: relative !important;
+        top: 0 !important;
+
+        background: white !important;
+        color: #000 !important;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .sectionTitle,
+    .label,
+    .verdict {
+        color: #000 !important;
+    }
+
+    .value,
+    .reasoning,
+    .timestamp,
+    .footer {
+        color: #000 !important;
+    }
+
+    /* Prevent awkward page breaks */
+    .section {
+        page-break-inside: avoid;
+    }
+}
