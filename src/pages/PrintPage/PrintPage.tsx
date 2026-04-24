@@ -25,7 +25,6 @@ export default function PrintPage() {
     const navigate = useNavigate();
     const hasPrinted = useRef(false);
 
-    // Guard against refresh / direct access
     if (!state || !state.data || !state.result) {
         return (
             <div className={styles.printContainer}>

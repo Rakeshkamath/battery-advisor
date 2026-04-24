@@ -23,19 +23,6 @@
     justify-content: center;
 }
 
-@media (max-width: 1024px) {
-    .container {
-        width: 80%;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        border-radius: 12px;
-    }
-}
-
 .batteryInputRow {
     display: flex;
     align-items: center;
@@ -47,6 +34,12 @@
     box-shadow: var(--shadow-card);
     margin-bottom: 14px;
 }
+
+
+.batterySelect {
+    width: 50%;
+}
+
 
 .disposeSection {
     padding: 10px;
@@ -130,41 +123,65 @@
     margin: 0;
 }
 
-.select {
+:global(.MuiFormControl-root) {
     width: 100%;
-    max-width: 220px;
-    min-width: 0;
-    box-sizing: border-box;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding: 10px 40px 10px 14px;
-    font-size: 14px;
+}
+
+:global(.MuiOutlinedInput-root) {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
     border-radius: 8px;
+    font-size: 14px;
+}
+
+:global(.MuiOutlinedInput-notchedOutline) {
+    border-color: var(--border-primary);
+}
+
+:global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+    border-color: var(--accent);
+}
+
+:global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+:global(.MuiSelect-select) {
+    padding: 12px 14px !important;
+    color: var(--text-primary);
+}
+
+:global(.MuiSelect-icon) {
+    color: var(--text-secondary);
+}
+
+:global(.MuiInputLabel-root) {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+:global(.MuiInputLabel-root.Mui-focused) {
+    color: var(--accent);
+}
+
+:global(.MuiPaper-root) {
     background-color: var(--bg-card);
     color: var(--text-primary);
     border: 1px solid var(--border-primary);
-    cursor: pointer;
-    outline: none;
-
-    background-image: url("data:image/svg+xml;utf8,\
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
-    <polyline points='6 8 10 12 14 8'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-size: 16px;
-    transition: border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease;
+    box-shadow: var(--shadow-card);
 }
 
-.select:hover {
-    border-color: #38bdf8;
+:global(.MuiMenuItem-root) {
+    font-size: 14px;
 }
 
-.select:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+:global(.MuiMenuItem-root:hover) {
+    background-color: rgba(56, 189, 248, 0.12);
+}
+
+:global(.MuiMenuItem-root.Mui-selected) {
+    background-color: rgba(56, 189, 248, 0.18);
 }
 
 .grid {
@@ -177,24 +194,12 @@
     grid-column: span 2;
 }
 
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .field:last-child {
-        grid-column: span 1;
-    }
-}
-
-
 .field {
     display: flex;
     flex-direction: column;
 }
 
-.field input,
-.field select {
+.field input {
     background-color: var(--bg-card);
     color: var(--text-primary);
     border: 1px solid var(--border-primary);
@@ -209,8 +214,7 @@
     color: var(--text-secondary);
 }
 
-.field input:focus,
-.field select:focus {
+.field input:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
 }
@@ -232,5 +236,26 @@ button {
 
     &:hover {
         opacity: 0.9;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field:last-child {
+        grid-column: span 1;
     }
 }

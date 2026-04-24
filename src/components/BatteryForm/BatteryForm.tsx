@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import type { IBatteryFormState, IBatteryInput } from "../../models/battery";
 import styles from "./BatteryForm.module.scss";
-import Button from "../ui/Button";
+import Button from "../ui/Button/Button";
 import BatteryAnalysisLoading from "../ui/Loading/BatteryAnalysisLoading";
+import MuiSelect from "../ui/Dropdown/Dropdown";
 
 type Props = {
     onSubmit: (data: IBatteryInput) => void;
@@ -79,7 +80,7 @@ export default function BatteryForm({ onSubmit }: Props) {
 
         setTimeout(() => {
             setIsAnalyzing(false);
-            onSubmit(data); // Navigate to next screen
+            onSubmit(data);
         }, 3000);
     };
 
@@ -113,38 +114,31 @@ export default function BatteryForm({ onSubmit }: Props) {
         data.recycled <= 100 &&
         !sohError;
 
-    /* -------------------------------- Loading screen -------------------------------- */
     if (isAnalyzing) {
         return <BatteryAnalysisLoading />;
     }
 
-    /* -------------------------------- UI -------------------------------- */
     return (
         <div className={styles.container}>
             <div className={styles.inner}>
-                {/* Header + Battery selector */}
                 <div className={styles.batteryInputRow}>
                     <h2 className={styles.title}>Battery Input</h2>
-
-                    <select
-                        className={styles.select}
-                        onChange={(e) => {
-                            const selected = list.find(
-                                b => b.id === e.target.value
-                            );
-                            if (selected) setData(selected);
-                        }}
-                    >
-                        <option value="">Select Battery</option>
-                        {list.map(b => (
-                            <option key={b.id} value={b.id}>
-                                {b.id}
-                            </option>
-                        ))}
-                    </select>
+                    <div className={styles.batterySelect}>
+                        <MuiSelect
+                            label="Select Battery"
+                            value={data.id}
+                            options={list.map(b => ({
+                                label: b.id,
+                                value: b.id,
+                            }))}
+                            onChange={(batteryId) => {
+                                const selected = list.find(b => b.id === batteryId);
+                                if (selected) setData(selected);
+                            }}
+                        />
+                    </div>
                 </div>
 
-                {/* Grid inputs */}
                 <div className={styles.grid}>
                     <div className={styles.field}>
                         <input
@@ -192,20 +186,24 @@ export default function BatteryForm({ onSubmit }: Props) {
                     </div>
 
                     <div className={styles.field}>
-                        <select
-                            name="chemistry"
+                        <MuiSelect
+                            label="Chemistry"
                             value={data.chemistry}
-                            onChange={handleChange}
-                        >
-                            <option value="">Select chemistry</option>
-                            <option value="NMC">NMC</option>
-                            <option value="LFP">LFP</option>
-                            <option value="NCA">NCA</option>
-                        </select>
+                            options={[
+                                { label: "NMC", value: "NMC" },
+                                { label: "LFP", value: "LFP" },
+                                { label: "NCA", value: "NCA" },
+                            ]}
+                            onChange={(value) =>
+                                setData(prev => ({
+                                    ...prev,
+                                    chemistry: value,
+                                }))
+                            }
+                        />
                     </div>
                 </div>
 
-                {/* Toggles */}
                 <div className={styles.disposeSection}>
                     <div className={styles.toggleRow}>
                         <span>Physical damage</span>
@@ -240,7 +238,6 @@ export default function BatteryForm({ onSubmit }: Props) {
                     </div>
                 </div>
 
-                {/* Submit */}
                 <div className={styles.button_container}>
                     <Button
                         label="Evaluate"

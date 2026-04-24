@@ -1,22 +1,5 @@
 @use './variables' as *;
 
-/* ===========================================================
-   MIXINS LIBRARY
-   Reusable helpers for all projects
-   -----------------------------------------------------------
-   Includes:
-   - Responsive breakpoints
-   - Layout utilities
-   - Flex utilities
-   - Typography helpers
-   - Visual effects (glass, card, container)
-=========================================================== */
-
-
-/* -----------------------------------
-   RESPONSIVE BREAKPOINTS
------------------------------------ */
-
 @mixin mobile {
     @media (max-width: $bp-mobile) {
         @content;
@@ -42,22 +25,12 @@
     }
 }
 
-
-/* -----------------------------------
-   CONTAINER
------------------------------------ */
-
 @mixin container {
     width: 100%;
     max-width: $container-max;
     padding-inline: $space-xl;
     margin-inline: auto;
 }
-
-
-/* -----------------------------------
-   FLEX UTILITIES
------------------------------------ */
 
 @mixin flex-center {
     display: flex;
@@ -76,11 +49,6 @@
     flex-direction: column;
 }
 
-
-/* -----------------------------------
-   CARD STYLE
------------------------------------ */
-
 @mixin card {
     border-radius: $radius-md;
     background: $color-white;
@@ -88,16 +56,10 @@
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-
-/* -----------------------------------
-   TEXT HELPERS
------------------------------------ */
-
 @mixin truncate($lines: 1) {
     display: -webkit-box;
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
-    // overflow: hidden;
 }
 
 @mixin text-gradient($from, $to) {
@@ -105,11 +67,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-/* -----------------------------------
-   EFFECTS (GLASS, BLUR, BORDER)
------------------------------------ */
 
 @mixin glass($blur: 10px, $opacity: 0.15) {
     backdrop-filter: blur($blur);
@@ -129,20 +86,16 @@
         padding: 1px;
         background: linear-gradient(90deg, $from, $to);
 
-        /* ✅ Standard mask (Firefox + modern browsers) */
         mask:
             linear-gradient(#fff 0 0) content-box,
             linear-gradient(#fff 0 0);
 
-        /* ✅ WebKit mask for Chrome/Safari */
         -webkit-mask:
             linear-gradient(#fff 0 0) content-box,
             linear-gradient(#fff 0 0);
 
-        /* ✅ Mask composite (standard syntax) */
         mask-composite: exclude;
 
-        /* ✅ Safari/WebKit composite */
         -webkit-mask-composite: xor;
 
         pointer-events: none;

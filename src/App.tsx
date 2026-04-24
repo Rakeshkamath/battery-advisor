@@ -1,6 +1,6 @@
 import './App.css'
-import ResultPage from './pages/ResultPage'
-import PrintPage from './pages/PrintPage'
+import ResultPage from './pages/ResultPage/ResultPage'
+import PrintPage from './pages/PrintPage/PrintPage'
 import InputPage from './pages/InputPage'
 import AppLayout from "./layouts/AppLayout"
 import { BrowserRouter, Routes, Route } from "react-router-dom"

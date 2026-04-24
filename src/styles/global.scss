@@ -20,13 +20,6 @@ body {
     align-items: center;
 }
 
-@media (max-width: 1024px) {
-    #root {
-        min-height: 100vh;
-    }
-}
-
-
 .result_page {
     border: 1px solid #ccc;
     padding: 20px;
@@ -38,4 +31,92 @@ body {
 
 .button-container {
     width: 50%;
+}
+
+/* -------------------- MUI THEME OVERRIDES -------------------- */
+
+/* Form control wrapper */
+:global(.MuiFormControl-root) {
+    background: transparent;
+}
+
+/* Input root */
+:global(.MuiOutlinedInput-root) {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-radius: 8px;
+}
+
+/* Default border */
+:global(.MuiOutlinedInput-notchedOutline) {
+    border-color: var(--border-primary);
+}
+
+/* Hover border */
+:global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+    border-color: var(--accent);
+}
+
+/* Focused border */
+:global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+/* Input text */
+:global(.MuiInputBase-input) {
+    color: var(--text-primary);
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+/* Placeholder */
+:global(.MuiInputBase-input::placeholder) {
+    color: var(--text-secondary);
+}
+
+/* Label */
+:global(.MuiInputLabel-root) {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Focused label */
+:global(.MuiInputLabel-root.Mui-focused) {
+    color: var(--accent);
+}
+
+/* Dropdown arrow */
+:global(.MuiSelect-icon) {
+    color: var(--text-secondary);
+}
+
+/* Menu paper */
+:global(.MuiPaper-root) {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-card);
+}
+
+/* Menu items */
+:global(.MuiMenuItem-root) {
+    font-size: 14px;
+}
+
+/* Hover menu item */
+:global(.MuiMenuItem-root:hover) {
+    background-color: rgba(56, 189, 248, 0.12);
+}
+
+/* Selected menu item */
+:global(.MuiMenuItem-root.Mui-selected) {
+    background-color: rgba(56, 189, 248, 0.2);
+}
+
+
+@media (max-width: 1024px) {
+    #root {
+        min-height: 100vh;
+    }
 }

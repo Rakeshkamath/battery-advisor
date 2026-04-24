@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use '../../../styles/variables' as *;
 
 .btn {
     --btn-bg: #00e5ff;
@@ -66,7 +66,6 @@
     }
 }
 
-/* Optional platform-specific accents */
 .icon-btn--facebook:hover {
     background: #1877f2;
     color: #fff;

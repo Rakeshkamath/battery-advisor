@@ -36,8 +36,6 @@ export default function Navbar({
                     <LightModeIcon className={`${styles.icon} ${styles.sun}`} aria-hidden />
                     <DarkModeIcon className={`${styles.icon} ${styles.moon}`} aria-hidden />
                 </button>
-
-
             </Toolbar>
         </AppBar>
     );

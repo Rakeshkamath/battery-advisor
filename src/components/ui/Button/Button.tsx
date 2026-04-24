@@ -1,5 +1,5 @@
 import type { JSX } from 'react'
-import './ui.scss'
+import './Button.module.scss'
 
 
 interface ButtonProps {

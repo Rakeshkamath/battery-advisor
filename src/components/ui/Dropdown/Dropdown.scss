@@ -1,0 +1,39 @@
+.muiSelectRoot {
+    width: 100%;
+
+    .MuiFormControl-root {
+        width: 100%;
+    }
+
+
+    .MuiOutlinedInput-root {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+        border-radius: 8px;
+        font-size: 14px;
+
+        .MuiOutlinedInput-notchedOutline {
+            border-color: var(--border-primary);
+        }
+
+        &:hover .MuiOutlinedInput-notchedOutline {
+            border-color: var(--accent);
+        }
+
+        &.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-color: var(--accent);
+        }
+    }
+
+    .MuiInputLabel-root {
+        color: var(--text-secondary);
+
+        &.Mui-focused {
+            color: var(--accent);
+        }
+    }
+
+    .MuiSvgIcon-root {
+        color: var(--text-secondary);
+    }
+}
